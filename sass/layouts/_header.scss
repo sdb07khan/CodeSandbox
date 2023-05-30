@@ -1,0 +1,104 @@
+/* Header Styles */
+.header {
+  background-color: var(--colors-neutral700);
+  border-bottom: 1px solid var(--colors-neutral600);
+  position: relative;
+  z-index: 200000;
+
+  &Container {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 11rem;
+
+    & .headerIconContainer {
+      margin-right: 4rem;
+
+      & .iconLink {
+        /* Your styles here */
+
+        & .iconBox {
+          & .svgIcon {
+            height: 24px;
+            width: 24px;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .nav {
+    /* Your styles here */
+
+    & .navContainer {
+      /* Your styles here */
+
+      & .navList {
+        display: flex;
+        gap: 24px;
+        list-style: none;
+
+        & .navItem {
+          /* Your styles here */
+
+          & .navLink {
+            text-decoration: none;
+            color: var(--colors-foreground100);
+            font-size: 1.2rem;
+            font-family: var(--primary-font);
+            opacity: 0.5;
+            transition: all 0.2s ease-in;
+
+            &:hover {
+              opacity: 0.9;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & .signInBox {
+    margin-left: auto;
+
+    & .signInList {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+
+      & .signInItem {
+        /* Your styles here */
+
+        & .signInLink {
+          text-decoration: none;
+          color: var(--colors-foreground100);
+          font-size: 1.2rem;
+          font-family: var(--primary-font);
+          opacity: 0.5;
+          transition: all 0.2s ease-in;
+
+          &:hover {
+            opacity: 0.9;
+          }
+        }
+
+        #trybtn {
+          padding: 6px 12px;
+          border-radius: 4px;
+          background-color: var(--colors-lime500);
+          opacity: 1;
+          color: var(--colors-neutral700);
+          transition: all 0.2s ease-in;
+
+          &:hover {
+            background-color: var(--colors-lime300);
+          }
+        }
+      }
+    }
+  }
+}

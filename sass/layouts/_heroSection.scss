@@ -1,0 +1,124 @@
+/* Hero Styles */
+.hero {
+  background-image: var(--colors-neutral700);
+  position: relative;
+  width: 100%; /* Set width to 100% */
+  height: 100vh;
+  min-height: calc(
+    100vh + 114px
+  ); /* Adjusted height to account for
+    navigation */
+  overflow: hidden; /* Added overflow property */
+  z-index: 10;
+  border-bottom: 1px solid var(--colors-neutral600);
+
+  & .bgImageBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    & .bgImage {
+      position: absolute;
+      width: 100%;
+      height: 100%; /* Set height to 100% */
+      top: 0; /* Adjust top position */
+      left: 0;
+      object-fit: cover;
+      object-position: center center;
+      color: transparent;
+    }
+  }
+
+  &Container {
+    position: relative;
+    z-index: 100;
+    text-align: center;
+
+    & .heroTextContainer {
+      margin-top: 6rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4rem;
+      max-width: 55rem;
+      margin-inline: auto;
+
+      & .headingTextBox {
+        /* Your styles here */
+
+        & .headingText {
+          font-family: var(--font-TWKEverest-Medium);
+          font-size: 16rem;
+          line-height: 0.8;
+          letter-spacing: -8px;
+          color: var(--colors-foreground100);
+
+          .line1 {
+            -webkit-text-stroke: 1px var(--colors-lime800);
+            color: transparent;
+          }
+
+          .line2 {
+            -webkit-text-stroke: 1px var(--colors-lime600);
+            color: transparent;
+          }
+
+          .line3 {
+            -webkit-text-stroke: 1px var(--colors-lime400);
+            color: transparent;
+          }
+          .char {
+            visibility: hidden;
+          }
+        }
+      }
+
+      & .paraBox {
+        & .paraText {
+          font-family: var(--primary-font);
+          font-size: 2.6rem;
+          font-weight: 500;
+          color: var(--colors-foreground200);
+        }
+      }
+
+      & .linkContainer {
+        /* Your styles here */
+
+        & .linkBox {
+          display: flex;
+          justify-content: space-between;
+
+          & .createlink {
+            text-decoration: none;
+            font-family: var(--primary-font);
+            font-size: 2.6rem;
+            color: var(--colors-lime600);
+            transition: all 0.3s ease-in;
+
+            &:hover .text {
+              text-decoration: underline;
+              text-decoration-color: var(--colors-lime400);
+              color: var(--colors-lime400);
+            }
+
+            & .icon {
+              /* Your styles here */
+
+              .svgIcon {
+                height: 2rem;
+                width: 2rem;
+              }
+            }
+
+            & .text {
+              /* Your styles here */
+            }
+          }
+        }
+      }
+    }
+  }
+}

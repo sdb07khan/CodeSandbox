@@ -1,0 +1,49 @@
+.featured {
+  display: flex;
+  overflow: hidden;
+
+  .featuredContainer {
+    animation: marquee 100s linear infinite;
+
+    .featuredBox {
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      .featuredLink {
+        text-decoration: none;
+        font-family: var(--primary-font);
+        font-size: 1.8rem;
+        color: var(--colors-foreground200);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 3rem 4rem;
+
+        .svgIcon {
+          svg {
+            height: 3rem;
+            width: 3rem;
+          }
+        }
+
+        .iconText {
+          white-space: nowrap;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &:hover {
+    .featuredContainer {
+      animation-play-state: paused;
+    }
+    .featuredLink {
+      opacity: 0.4;
+    }
+  }
+}
