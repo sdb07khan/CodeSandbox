@@ -14,13 +14,13 @@ window.addEventListener("load", () => {
   });
 
   heroTextReveal
+    .to(".bgImageBox", { opacity: 1, duration: 2.5, delay: 1 })
     .to(
       "#heroHeadingText-js .line1 .char",
       {
         autoAlpha: 1,
         stagger: 0.01,
         color: "#d6fb41",
-        // ease: "expo.out",
         duration: 3,
       },
       1
@@ -32,8 +32,6 @@ window.addEventListener("load", () => {
         stagger: 0.01,
         color: "#e3ff73",
         duration: 3,
-
-        // ease: "expo.out",
       },
       1.1
     )
@@ -44,11 +42,10 @@ window.addEventListener("load", () => {
         stagger: 0.01,
         color: "#f1ffb9",
         duration: 3,
-
-        // ease: "expo.out",
       },
       1.2
-    );
+    )
+    .to(".paraBox", { opacity: 1, duration: 2, delay: -2 });
 
   ScrollTrigger.create({
     animation: heroTextReveal,
@@ -57,6 +54,62 @@ window.addEventListener("load", () => {
     end: "70% 10%",
     toggleActions: "play none none none",
   });
+});
 
-  // Marquee stop on hover or click HIGHLIGHT
+//hero section links HIGHLIGHT
+
+const heroLinkReveal = gsap.timeline();
+
+heroLinkReveal.set(".linkContainer .linkBox", {
+  autoAlpha: 0,
+});
+
+heroLinkReveal.to(".linkContainer .linkBox", {
+  autoAlpha: 1,
+  delay: 0.5,
+  duration: 2.5,
+});
+
+ScrollTrigger.create({
+  animation: heroLinkReveal,
+  trigger: ".linkContainer",
+  start: "top 90%",
+  end: "bottom 80%",
+  toggleActions: "play none none none",
+});
+
+// scroll animation HIGHLIGHT
+
+const circleRevealAnimation = gsap.timeline({ duration: 0.5 });
+
+circleRevealAnimation
+  // .to(".circleBox", { scale: 0.5 })
+  .to(".imageBox:nth-child(1)", { opacity: 0 })
+  .to(".imageBox:nth-child(2)", { opacity: 1 })
+  .to(".imageBox:nth-child(2)", { opacity: 0 })
+  .to(".imageBox:nth-child(3)", { opacity: 1 })
+  .to(".imageBox:nth-child(3)", { opacity: 0 })
+  .to(".imageBox:nth-child(4)", { opacity: 1 })
+  .to(".imageBox:nth-child(4)", { opacity: 0 })
+  .to(".imageBox:nth-child(5)", { opacity: 1 })
+  .to(".imageBox:nth-child(5)", { opacity: 0 })
+  .to(".imageBox:nth-child(6)", { opacity: 1 })
+  .to(".imageBox:nth-child(6)", { opacity: 0 })
+  .to(".imageBox:nth-child(7)", { opacity: 1 })
+  .to(".imageBox:nth-child(7)", { opacity: 0 })
+  .to(".imageBox:nth-child(8)", { opacity: 1 })
+  .to(".imageBox:nth-child(8)", { opacity: 0 })
+  .to(".imageBox:nth-child(9)", { opacity: 1 })
+  .to(".imageBox:nth-child(9)", { opacity: 0 })
+  .to(".imageBox:nth-child(10)", { opacity: 1 })
+  .to(".imageBox:nth-child(10)", { opacity: 0 });
+
+ScrollTrigger.create({
+  animation: circleRevealAnimation,
+  trigger: ".animationContainer",
+  start: "top top",
+  end: "bottom bottom",
+  pin: ".animationContainer",
+  toggleActions: "play reverse none reverse",
+  scrub: 30,
 });

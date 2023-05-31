@@ -1,0 +1,86 @@
+.animation {
+  .animationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .circleBox {
+      width: 100vh;
+      height: 100vh;
+      transform: scale(3);
+      position: relative;
+
+      .imageBox {
+        width: 100vh;
+        height: 100vh;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &:nth-child(1) {
+          z-index: 0;
+          opacity: 1;
+        }
+
+        &:nth-child(2) {
+          z-index: -1;
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          z-index: -2;
+          opacity: 0;
+        }
+
+        &:nth-child(4) {
+          z-index: -3;
+          opacity: 0;
+        }
+
+        &:nth-child(5) {
+          z-index: -4;
+          opacity: 0;
+        }
+
+        &:nth-child(6) {
+          z-index: -5;
+          opacity: 0;
+        }
+
+        &:nth-child(7) {
+          z-index: -6;
+          opacity: 0;
+        }
+
+        &:nth-child(8) {
+          z-index: -7;
+          opacity: 0;
+        }
+
+        &:nth-child(9) {
+          z-index: -8;
+          opacity: 0;
+        }
+
+        &:nth-child(10) {
+          z-index: -9;
+          opacity: 0;
+        }
+
+        .image {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          color: transparent;
+        }
+      }
+    }
+  }
+}

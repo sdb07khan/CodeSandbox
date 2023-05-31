@@ -1,6 +1,9 @@
 .featured {
   display: flex;
   overflow: hidden;
+  position: relative;
+  z-index: 1000;
+  background-color: var(--colors-neutral700);
 
   .featuredContainer {
     animation: marquee 100s linear infinite;
