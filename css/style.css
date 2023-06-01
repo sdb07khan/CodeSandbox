@@ -145,62 +145,182 @@ body {
   animation-play-state: paused !important; }
 
 .animation .animationContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  background: black !important;
+  height: 100vh; }
   .animation .animationContainer .circleBox {
-    width: 100vh;
-    height: 100vh;
-    transform: scale(3);
-    position: relative; }
-    .animation .animationContainer .circleBox .imageBox {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .animation .animationContainer .circleBox .circleAnimation {
       width: 100vh;
       height: 100vh;
+      transform: scale(3); }
+      .animation .animationContainer .circleBox .circleAnimation .imageBox {
+        width: 100vh;
+        height: 100vh;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(1) {
+          z-index: 0;
+          opacity: 1; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(2) {
+          z-index: -1;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(3) {
+          z-index: -2;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(4) {
+          z-index: -3;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(5) {
+          z-index: -4;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(6) {
+          z-index: -5;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(7) {
+          z-index: -6;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(8) {
+          z-index: -7;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(9) {
+          z-index: -8;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox:nth-child(10) {
+          z-index: -9;
+          opacity: 0; }
+        .animation .animationContainer .circleBox .circleAnimation .imageBox .image {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          color: transparent; }
+  .animation .animationContainer .squareBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .animation .animationContainer .squareBox .squareAnimation {
+      width: 300px;
+      height: 300px;
+      transform: scale(2.1); }
+      .animation .animationContainer .squareBox .squareAnimation .squareImageBox {
+        width: 300px;
+        height: 300px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(1) {
+          z-index: 0;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(2) {
+          z-index: -1;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(3) {
+          z-index: -2;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(4) {
+          z-index: -3;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(5) {
+          z-index: -4;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(6) {
+          z-index: -5;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(7) {
+          z-index: -6;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(8) {
+          z-index: -7;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(9) {
+          z-index: -8;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(10) {
+          z-index: -9;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(11) {
+          z-index: -10;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(12) {
+          z-index: -11;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(13) {
+          z-index: -12;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(14) {
+          z-index: -13;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(15) {
+          z-index: -14;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox:nth-child(16) {
+          z-index: -15;
+          opacity: 1; }
+        .animation .animationContainer .squareBox .squareAnimation .squareImageBox .squareImage {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          object-fit: cover;
+          color: transparent; }
+  .animation .animationContainer .cloudTextBox1 {
+    position: relative;
+    z-index: -1; }
+    .animation .animationContainer .cloudTextBox1 .cloudTextBox2 {
       position: fixed;
-      left: 50%;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%; }
+      .animation .animationContainer .cloudTextBox1 .cloudTextBox2 .cloudTextBox3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; }
+        .animation .animationContainer .cloudTextBox1 .cloudTextBox2 .cloudTextBox3 .textHeading {
+          font-family: var(--font-TWKEverest-Medium);
+          font-size: 12rem;
+          color: var(--colors-foreground200);
+          letter-spacing: -4px;
+          transform: scale(1.1); }
+          .animation .animationContainer .cloudTextBox1 .cloudTextBox2 .cloudTextBox3 .textHeading .word1 {
+            opacity: 0; }
+          .animation .animationContainer .cloudTextBox1 .cloudTextBox2 .cloudTextBox3 .textHeading .word2 {
+            opacity: 0; }
+          .animation .animationContainer .cloudTextBox1 .cloudTextBox2 .cloudTextBox3 .textHeading .word3 {
+            opacity: 0; }
+  .animation .animationContainer .codePictureBox1 {
+    position: relative;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0; }
+    .animation .animationContainer .codePictureBox1 .codePictureBox2 {
+      position: fixed;
       top: 50%;
-      transform: translate(-50%, -50%); }
-      .animation .animationContainer .circleBox .imageBox:nth-child(1) {
-        z-index: 0;
-        opacity: 1; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(2) {
-        z-index: -1;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(3) {
-        z-index: -2;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(4) {
-        z-index: -3;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(5) {
-        z-index: -4;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(6) {
-        z-index: -5;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(7) {
-        z-index: -6;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(8) {
-        z-index: -7;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(9) {
-        z-index: -8;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox:nth-child(10) {
-        z-index: -9;
-        opacity: 0; }
-      .animation .animationContainer .circleBox .imageBox .image {
-        position: absolute;
-        height: 100%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      padding: 0 12rem; }
+      .animation .animationContainer .codePictureBox1 .codePictureBox2 .codePictureBox3 .codeImage {
+        color: transparent;
         width: 100%;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        object-fit: cover;
-        color: transparent; }
+        height: auto;
+        border-radius: 3px; }
 
 .featured {
   display: flex;

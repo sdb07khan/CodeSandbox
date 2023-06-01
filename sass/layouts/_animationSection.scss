@@ -1,84 +1,269 @@
 .animation {
   .animationContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    background: black !important;
+    height: 100vh;
+    // border: 2px solid red;
 
     .circleBox {
-      width: 100vh;
-      height: 100vh;
-      transform: scale(3);
-      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      .imageBox {
+      .circleAnimation {
         width: 100vh;
         height: 100vh;
+        transform: scale(3);
+
+        .imageBox {
+          width: 100vh;
+          height: 100vh;
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+
+          &:nth-child(1) {
+            z-index: 0;
+            opacity: 1;
+          }
+
+          &:nth-child(2) {
+            z-index: -1;
+            opacity: 0;
+          }
+
+          &:nth-child(3) {
+            z-index: -2;
+            opacity: 0;
+          }
+
+          &:nth-child(4) {
+            z-index: -3;
+            opacity: 0;
+          }
+
+          &:nth-child(5) {
+            z-index: -4;
+            opacity: 0;
+          }
+
+          &:nth-child(6) {
+            z-index: -5;
+            opacity: 0;
+          }
+
+          &:nth-child(7) {
+            z-index: -6;
+            opacity: 0;
+          }
+
+          &:nth-child(8) {
+            z-index: -7;
+            opacity: 0;
+          }
+
+          &:nth-child(9) {
+            z-index: -8;
+            opacity: 0;
+          }
+
+          &:nth-child(10) {
+            z-index: -9;
+            opacity: 0;
+          }
+
+          .image {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            color: transparent;
+          }
+        }
+      }
+    }
+
+    .squareBox {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .squareAnimation {
+        width: 300px;
+        height: 300px;
+        transform: scale(2.1);
+
+        .squareImageBox {
+          width: 300px;
+          height: 300px;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          &:nth-child(1) {
+            z-index: 0;
+            opacity: 1;
+          }
+
+          &:nth-child(2) {
+            z-index: -1;
+            opacity: 1;
+          }
+
+          &:nth-child(3) {
+            z-index: -2;
+            opacity: 1;
+          }
+
+          &:nth-child(4) {
+            z-index: -3;
+            opacity: 1;
+          }
+
+          &:nth-child(5) {
+            z-index: -4;
+            opacity: 1;
+          }
+
+          &:nth-child(6) {
+            z-index: -5;
+            opacity: 1;
+          }
+
+          &:nth-child(7) {
+            z-index: -6;
+            opacity: 1;
+          }
+
+          &:nth-child(8) {
+            z-index: -7;
+            opacity: 1;
+          }
+
+          &:nth-child(9) {
+            z-index: -8;
+            opacity: 1;
+          }
+
+          &:nth-child(10) {
+            z-index: -9;
+            opacity: 1;
+          }
+
+          &:nth-child(11) {
+            z-index: -10;
+            opacity: 1;
+          }
+
+          &:nth-child(12) {
+            z-index: -11;
+            opacity: 1;
+          }
+
+          &:nth-child(13) {
+            z-index: -12;
+            opacity: 1;
+          }
+
+          &:nth-child(14) {
+            z-index: -13;
+            opacity: 1;
+          }
+
+          &:nth-child(15) {
+            z-index: -14;
+            opacity: 1;
+          }
+
+          &:nth-child(16) {
+            z-index: -15;
+            opacity: 1;
+          }
+
+          .squareImage {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            object-fit: cover;
+            color: transparent;
+          }
+        }
+      }
+    }
+
+    .cloudTextBox1 {
+      position: relative;
+      z-index: -1;
+
+      .cloudTextBox2 {
         position: fixed;
-        left: 50%;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+
+        .cloudTextBox3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+
+          .textHeading {
+            font-family: var(--font-TWKEverest-Medium);
+            font-size: 12rem;
+            color: var(--colors-foreground200);
+            letter-spacing: -4px;
+            transform: scale(1.1);
+
+            .word1 {
+              opacity: 0;
+            }
+
+            .word2 {
+              opacity: 0;
+            }
+
+            .word3 {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .codePictureBox1 {
+      position: relative;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0;
+
+      .codePictureBox2 {
+        position: fixed;
         top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
         transform: translate(-50%, -50%);
+        padding: 0 12rem;
 
-        &:nth-child(1) {
-          z-index: 0;
-          opacity: 1;
-        }
-
-        &:nth-child(2) {
-          z-index: -1;
-          opacity: 0;
-        }
-
-        &:nth-child(3) {
-          z-index: -2;
-          opacity: 0;
-        }
-
-        &:nth-child(4) {
-          z-index: -3;
-          opacity: 0;
-        }
-
-        &:nth-child(5) {
-          z-index: -4;
-          opacity: 0;
-        }
-
-        &:nth-child(6) {
-          z-index: -5;
-          opacity: 0;
-        }
-
-        &:nth-child(7) {
-          z-index: -6;
-          opacity: 0;
-        }
-
-        &:nth-child(8) {
-          z-index: -7;
-          opacity: 0;
-        }
-
-        &:nth-child(9) {
-          z-index: -8;
-          opacity: 0;
-        }
-
-        &:nth-child(10) {
-          z-index: -9;
-          opacity: 0;
-        }
-
-        .image {
-          position: absolute;
-          height: 100%;
-          width: 100%;
-          left: 0;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          object-fit: cover;
-          color: transparent;
+        .codePictureBox3 {
+          .codeImage {
+            color: transparent;
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+          }
         }
       }
     }
