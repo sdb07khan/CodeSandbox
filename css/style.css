@@ -138,9 +138,6 @@ body {
   background-color: var(--colors-neutral800);
   opacity: 0; }
 
-.pageMain {
-  max-width: 1600px; }
-
 .paused {
   animation-play-state: paused !important; }
 
