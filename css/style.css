@@ -141,6 +141,9 @@ body {
 .paused {
   animation-play-state: paused !important; }
 
+.lime {
+  color: var(--colors-lime700); }
+
 .animation .animationContainer {
   overflow: hidden;
   background: black !important;
@@ -152,7 +155,7 @@ body {
     .animation .animationContainer .circleBox .circleAnimation {
       width: 100vh;
       height: 100vh;
-      transform: scale(2.5); }
+      transform: scale(3); }
       .animation .animationContainer .circleBox .circleAnimation .imageBox {
         width: 100vh;
         height: 100vh;
@@ -206,12 +209,12 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); }
     .animation .animationContainer .squareBox .squareAnimation {
-      width: 300px;
-      height: 300px;
-      transform: scale(2.1); }
+      width: 30rem;
+      height: 30rem;
+      transform: scale(1.8); }
       .animation .animationContainer .squareBox .squareAnimation .squareImageBox {
-        width: 300px;
-        height: 300px;
+        width: 30rem;
+        height: 30rem;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -318,6 +321,140 @@ body {
         width: 100%;
         height: auto;
         border-radius: 3px; }
+  .animation .animationContainer .microBox1 {
+    position: fixed;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0; }
+    .animation .animationContainer .microBox1 .microBox2 {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 57%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+      .animation .animationContainer .microBox1 .microBox2 .microBox3 {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        transform: translateY(10%); }
+        .animation .animationContainer .microBox1 .microBox2 .microBox3 .microImgBox {
+          width: 25rem;
+          height: 25rem; }
+          .animation .animationContainer .microBox1 .microBox2 .microBox3 .microImgBox .microImg {
+            width: 100%;
+            height: auto;
+            color: transparent; }
+        .animation .animationContainer .microBox1 .microBox2 .microBox3 .microPara {
+          font-family: var(--primary-font);
+          font-size: 3.6rem;
+          color: var(--colors-foreground200);
+          font-weight: 500; }
+  .animation .animationContainer .anyBox1 {
+    position: relative;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0; }
+    .animation .animationContainer .anyBox1 .bottomLine {
+      will-change: transform, opacity;
+      display: block;
+      transform: scaleX(0);
+      opacity: 0; }
+      .animation .animationContainer .anyBox1 .bottomLine::after {
+        content: "";
+        width: 1000px;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(123, 97, 255, 0) 0%, #7b61ff 49.48%, rgba(123, 97, 255, 0) 100%);
+        will-change: transform;
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .animation .animationContainer .anyBox1 .anyBox2 {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 1;
+      width: 100%;
+      height: 100%; }
+      .animation .animationContainer .anyBox1 .anyBox2 .anyBox3 {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .animation .animationContainer .anyBox1 .anyBox2 .anyBox3 .anyText {
+          font-family: var(--font-TWKEverest-Medium);
+          font-size: 12rem;
+          color: var(--colors-foreground200);
+          font-weight: 600; }
+          .animation .animationContainer .anyBox1 .anyBox2 .anyBox3 .anyText .anyText1 {
+            display: inline-block;
+            transform: translateX(100px);
+            opacity: 0;
+            letter-spacing: 0.8; }
+          .animation .animationContainer .anyBox1 .anyBox2 .anyBox3 .anyText .anyText2 {
+            display: inline-block;
+            transform: translateX(100px);
+            opacity: 0; }
+  .animation .animationContainer .downloadBox1 {
+    position: relative;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0; }
+    .animation .animationContainer .downloadBox1 .downloadBox2 {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      max-width: 120rem;
+      margin-inline: auto; }
+      .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8vw;
+        transform: translateY(20%); }
+        .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 .dlImageBox {
+          width: 60%; }
+          .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 .dlImageBox .dlImg {
+            width: 100%;
+            height: auto; }
+        .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 .dlParaBox1 {
+          width: 30%; }
+          .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 .dlParaBox1 .dlParaBox2 {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem; }
+            .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 .dlParaBox1 .dlParaBox2 .dlParaText {
+              font-family: var(--primary-font);
+              font-weight: 600;
+              font-size: 3rem;
+              color: var(--colors-foreground200); }
+            .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 .dlParaBox1 .dlParaBox2 .dlLinkBox {
+              display: flex;
+              flex-direction: column;
+              gap: 2rem; }
+              .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 .dlParaBox1 .dlParaBox2 .dlLinkBox .dlLink {
+                text-decoration: none;
+                font-family: var(--primary-font);
+                font-weight: 600;
+                color: var(--colors-lime700);
+                font-size: 2rem;
+                transition: all 0.2s ease-out; }
+                .animation .animationContainer .downloadBox1 .downloadBox2 .downloadBox3 .dlParaBox1 .dlParaBox2 .dlLinkBox .dlLink:hover {
+                  text-decoration: underline;
+                  color: var(--colors-lime500); }
 
 .featured {
   display: flex;

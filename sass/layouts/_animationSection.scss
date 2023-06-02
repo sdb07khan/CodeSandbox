@@ -13,7 +13,7 @@
       .circleAnimation {
         width: 100vh;
         height: 100vh;
-        transform: scale(2.5);
+        transform: scale(3);
 
         .imageBox {
           width: 100vh;
@@ -95,13 +95,13 @@
       transform: translate(-50%, -50%);
 
       .squareAnimation {
-        width: 300px;
-        height: 300px;
-        transform: scale(2.1);
+        width: 30rem;
+        height: 30rem;
+        transform: scale(1.8);
 
         .squareImageBox {
-          width: 300px;
-          height: 300px;
+          width: 30rem;
+          height: 30rem;
           position: fixed;
           top: 50%;
           left: 50%;
@@ -268,15 +268,196 @@
       }
     }
 
-    .mircoBox1 {
+    .microBox1 {
+      position: fixed;
+      z-index: -1;
+      height: 100vh;
+      width: 100%;
+      left: 0;
+      top: 0;
+      opacity: 0;
+
       .microBox2 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 57%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
         .microBox3 {
-          .mircoImgBox {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 4rem;
+          transform: translateY(10%);
+
+          .microImgBox {
+            width: 25rem;
+            height: 25rem;
+
             .microImg {
+              width: 100%;
+              height: auto;
+              color: transparent;
             }
           }
 
           .microPara {
+            font-family: var(--primary-font);
+            font-size: 3.6rem;
+            color: var(--colors-foreground200);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    .anyBox1 {
+      position: relative;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0;
+
+      .bottomLine {
+        will-change: transform, opacity;
+        display: block;
+        transform: scaleX(0);
+        opacity: 0;
+
+        &::after {
+          content: "";
+          width: 1000px;
+          height: 2px;
+          background: linear-gradient(
+            90deg,
+            rgba(123, 97, 255, 0) 0%,
+            rgb(123, 97, 255) 49.48%,
+            rgba(123, 97, 255, 0) 100%
+          );
+          will-change: transform;
+          position: fixed;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .anyBox2 {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+
+        .anyBox3 {
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .anyText {
+            font-family: var(--font-TWKEverest-Medium);
+            font-size: 12rem;
+            color: var(--colors-foreground200);
+            font-weight: 600;
+
+            .anyText1 {
+              display: inline-block;
+              transform: translateX(100px);
+              opacity: 0;
+              letter-spacing: 0.8;
+            }
+
+            .anyText2 {
+              display: inline-block;
+              transform: translateX(100px);
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .downloadBox1 {
+      position: relative;
+      height: 100vh;
+      z-index: -1;
+      opacity: 0;
+
+      .downloadBox2 {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        transform: translate(-50%, -50%);
+        max-width: 120rem;
+        margin-inline: auto;
+
+        .downloadBox3 {
+          width: 100%;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8vw;
+          transform: translateY(20%);
+
+          .dlImageBox {
+            width: 60%;
+
+            .dlImg {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .dlParaBox1 {
+            width: 30%;
+
+            .dlParaBox2 {
+              display: flex;
+              flex-direction: column;
+              gap: 4rem;
+
+              .dlParaText {
+                font-family: var(--primary-font);
+                font-weight: 600;
+                font-size: 3rem;
+                color: var(--colors-foreground200);
+              }
+
+              .dlLinkBox {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .dlLink {
+                  text-decoration: none;
+                  font-family: var(--primary-font);
+                  font-weight: 600;
+                  color: var(--colors-lime700);
+                  font-size: 2rem;
+                  transition: all 0.2s ease-out;
+
+                  &:hover {
+                    text-decoration: underline;
+                    color: var(--colors-lime500);
+                  }
+
+                  .text {
+                  }
+
+                  .icon {
+                  }
+                }
+              }
+            }
           }
         }
       }
