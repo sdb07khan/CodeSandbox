@@ -152,7 +152,7 @@ body {
     .animation .animationContainer .circleBox .circleAnimation {
       width: 100vh;
       height: 100vh;
-      transform: scale(3); }
+      transform: scale(2.5); }
       .animation .animationContainer .circleBox .circleAnimation .imageBox {
         width: 100vh;
         height: 100vh;

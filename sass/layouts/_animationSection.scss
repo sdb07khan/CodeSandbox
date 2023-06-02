@@ -13,7 +13,7 @@
       .circleAnimation {
         width: 100vh;
         height: 100vh;
-        transform: scale(3);
+        transform: scale(2.5);
 
         .imageBox {
           width: 100vh;
@@ -263,6 +263,20 @@
             width: 100%;
             height: auto;
             border-radius: 3px;
+          }
+        }
+      }
+    }
+
+    .mircoBox1 {
+      .microBox2 {
+        .microBox3 {
+          .mircoImgBox {
+            .microImg {
+            }
+          }
+
+          .microPara {
           }
         }
       }

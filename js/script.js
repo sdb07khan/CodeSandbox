@@ -79,6 +79,62 @@ window.addEventListener("load", () => {
 
   // scroll animation HIGHLIGHT
 
+  // const circleRevealAnimation = gsap.timeline({
+  //   defaults: {
+  //     ease: "power1.out", // Add easing for smoother transitions
+  //   },
+  // });
+
+  // circleRevealAnimation
+  //   .to(".circleAnimation", { scale: 2, duration: 0.4 })
+  //   .to(".imageBox:nth-child(1)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 1.25, duration: 0.4 })
+  //   .to(".imageBox:nth-child(2)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 0.5, duration: 0.4 })
+  //   .to(".imageBox:nth-child(2)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 1.25, duration: 0.4 })
+  //   .to(".imageBox:nth-child(3)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 2, duration: 0.4 })
+  //   .to(".imageBox:nth-child(3)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 2.5, duration: 0.4 })
+  //   .to(".imageBox:nth-child(4)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 3, duration: 0.4 })
+  //   .to(".imageBox:nth-child(4)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 2, duration: 0.4 })
+  //   .to(".imageBox:nth-child(5)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 1, duration: 0.4 })
+  //   .to(".imageBox:nth-child(5)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 1.5, duration: 0.4 })
+  //   .to(".imageBox:nth-child(6)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 2, duration: 0.4 })
+  //   .to(".imageBox:nth-child(6)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 3, duration: 0.4 })
+  //   .to(".imageBox:nth-child(7)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 4, duration: 0.4 })
+  //   .to(".imageBox:nth-child(7)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 5, duration: 0.4 })
+  //   .to(".imageBox:nth-child(8)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 6, duration: 0.4 })
+  //   .to(".imageBox:nth-child(8)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 4.5, duration: 0.4 })
+  //   .to(".imageBox:nth-child(9)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 3, duration: 0.4 })
+  //   .to(".imageBox:nth-child(9)", { opacity: 0, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 4.5, duration: 0.4 })
+  //   .to(".imageBox:nth-child(10)", { opacity: 1, duration: 0.4 }, "<")
+  //   .to(".circleAnimation", { scale: 6, duration: 0.4 })
+  //   .to(".imageBox:nth-child(10)", { opacity: 0, duration: 0.4 }, "<");
+
+  // ScrollTrigger.create({
+  //   animation: circleRevealAnimation,
+  //   trigger: ".animationContainer",
+  //   start: "top top",
+  //   end: "+=1200%",
+  //   pin: ".animationContainer",
+  //   toggleActions: "play reverse none reverse",
+  //   scrub: 1,
+  // });
+
   const circleRevealAnimation = gsap.timeline({
     defaults: {
       ease: "power1.out", // Add easing for smoother transitions
@@ -86,44 +142,35 @@ window.addEventListener("load", () => {
   });
 
   circleRevealAnimation
-    .to(".circleAnimation", { scale: 2, duration: 0.4 })
-    .to(".imageBox:nth-child(1)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 1.25, duration: 0.4 })
-    .to(".imageBox:nth-child(2)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 0.5, duration: 0.4 })
-    .to(".imageBox:nth-child(2)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 1.25, duration: 0.4 })
-    .to(".imageBox:nth-child(3)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 2, duration: 0.4 })
-    .to(".imageBox:nth-child(3)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 2.5, duration: 0.4 })
-    .to(".imageBox:nth-child(4)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 3, duration: 0.4 })
-    .to(".imageBox:nth-child(4)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 2, duration: 0.4 })
-    .to(".imageBox:nth-child(5)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 1, duration: 0.4 })
-    .to(".imageBox:nth-child(5)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 1.5, duration: 0.4 })
-    .to(".imageBox:nth-child(6)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 2, duration: 0.4 })
-    .to(".imageBox:nth-child(6)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 3, duration: 0.4 })
-    .to(".imageBox:nth-child(7)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 4, duration: 0.4 })
-    .to(".imageBox:nth-child(7)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 5, duration: 0.4 })
-    .to(".imageBox:nth-child(8)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 6, duration: 0.4 })
-    .to(".imageBox:nth-child(8)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 4.5, duration: 0.4 })
-    .to(".imageBox:nth-child(9)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 3, duration: 0.4 })
-    .to(".imageBox:nth-child(9)", { opacity: 0, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 4.5, duration: 0.4 })
-    .to(".imageBox:nth-child(10)", { opacity: 1, duration: 0.4 }, "<")
-    .to(".circleAnimation", { scale: 6, duration: 0.4 })
-    .to(".imageBox:nth-child(10)", { opacity: 0, duration: 0.4 }, "<");
+    .to(".circleAnimation", { scale: 1, duration: 0.5 })
+    .to(".imageBox:nth-child(1)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(2)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 0.5, duration: 0.5 })
+    .to(".imageBox:nth-child(2)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(3)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 2, duration: 0.5 })
+    .to(".imageBox:nth-child(3)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(4)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 3, duration: 0.5 })
+    .to(".imageBox:nth-child(4)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(5)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 1, duration: 0.5 })
+    .to(".imageBox:nth-child(5)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(6)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 2, duration: 0.5 })
+    .to(".imageBox:nth-child(6)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(7)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 4, duration: 0.5 })
+    .to(".imageBox:nth-child(7)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(8)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 6, duration: 0.5 })
+    .to(".imageBox:nth-child(8)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(9)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 3, duration: 0.5 })
+    .to(".imageBox:nth-child(9)", { opacity: 0, duration: 0.5 }, "<")
+    .to(".imageBox:nth-child(10)", { opacity: 1, duration: 0.5 }, "<")
+    .to(".circleAnimation", { scale: 6, duration: 0.5 })
+    .to(".imageBox:nth-child(10)", { opacity: 0, duration: 0.5 }, "<");
 
   ScrollTrigger.create({
     animation: circleRevealAnimation,
@@ -143,7 +190,7 @@ window.addEventListener("load", () => {
 
   squareRevealAnimation
     .to(".squareAnimation", { scale: 1.7 })
-    .to(".squareImageBox:nth-child(1)", { opacity: 0, delay: 6 }, "<")
+    .to(".squareImageBox:nth-child(1)", { opacity: 0, delay: 3 }, "<")
     .to(".squareAnimation", { scale: 1.6 })
     .to(".squareImageBox:nth-child(2)", { opacity: 0 }, "<")
     .to(".squareAnimation", { scale: 1.5 })
@@ -194,7 +241,7 @@ window.addEventListener("load", () => {
       },
       "<"
     )
-    .to(".codePictureBox2", { scale: 0.9, duration: 4 }, "<")
+    .to(".codePictureBox2", { scale: 0.85, duration: 6 }, "<")
     .to(".codePictureBox1", {
       zIndex: -1,
       opacity: 0,
