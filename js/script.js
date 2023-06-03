@@ -316,4 +316,21 @@ window.addEventListener("load", () => {
     toggleActions: "play reverse none reverse",
     scrub: 0.5,
   });
+
+  const animationContainer = document.querySelector(".animationContainer");
+  const mediaQuery = window.matchMedia("(max-width: 1000px)");
+
+  function handleScreenSizeChange(mediaQuery) {
+    if (mediaQuery.matches) {
+      // Pause the animation if the screen size is below 1000px
+      squareRevealAnimation.pause();
+    } else {
+      // Resume or restart the animation if the screen size is above 1000px
+      squareRevealAnimation.play();
+    }
+  }
+
+  handleScreenSizeChange(mediaQuery); // Check the initial screen size
+
+  mediaQuery.addEventListener("change", handleScreenSizeChange); // Listen for screen size changes
 });
