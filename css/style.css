@@ -498,25 +498,65 @@ body {
   .headerContainer {
     display: flex;
     align-items: center;
-    padding: 1.2rem 11rem; }
+    padding: 1.2rem 8%; }
+    @media only screen and (max-width: 62.5em) {
+      .headerContainer {
+        position: relative;
+        padding: 1.2rem 4%;
+        padding-bottom: 6.6rem;
+        padding-top: 1.2rem; } }
     .headerContainer .headerIconContainer {
       margin-right: 4rem; }
       .headerContainer .headerIconContainer .iconLink {
-        /* Your styles here */ }
-        .headerContainer .headerIconContainer .iconLink .iconBox .svgIcon {
-          height: 24px;
-          width: 24px;
-          transition: all 0.2s ease-in; }
-          .headerContainer .headerIconContainer .iconLink .iconBox .svgIcon:hover {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-family: var(--primary-font);
+        color: var(--colors-foreground100); }
+        .headerContainer .headerIconContainer .iconLink .iconBox {
+          display: flex;
+          align-items: center;
+          gap: 10px; }
+          .headerContainer .headerIconContainer .iconLink .iconBox:hover .svgIcon {
             opacity: 0.8; }
+          .headerContainer .headerIconContainer .iconLink .iconBox .svgIcon {
+            height: 24px;
+            width: 24px;
+            transition: all 0.2s ease-in; }
+          .headerContainer .headerIconContainer .iconLink .iconBox .iconText {
+            opacity: 0.7;
+            display: none; }
+            @media only screen and (max-width: 62.5em) {
+              .headerContainer .headerIconContainer .iconLink .iconBox .iconText {
+                display: block; } }
   .header .nav {
-    /* Your styles here */ }
+    position: relative; }
+    @media only screen and (max-width: 62.5em) {
+      .header .nav {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 1.8rem 4%; }
+        .header .nav::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          border-bottom: 1px solid var(--colors-neutral600); } }
+    @media only screen and (max-width: 37.5em) {
+      .header .nav {
+        overflow: scroll hidden; } }
     .header .nav .navContainer {
       /* Your styles here */ }
       .header .nav .navContainer .navList {
         display: flex;
         gap: 24px;
         list-style: none; }
+        @media only screen and (max-width: 62.5em) {
+          .header .nav .navContainer .navList {
+            justify-content: space-between;
+            align-items: center; } }
         .header .nav .navContainer .navList .navItem {
           /* Your styles here */ }
           .header .nav .navContainer .navList .navItem .navLink {
@@ -525,7 +565,11 @@ body {
             font-size: 1.2rem;
             font-family: var(--primary-font);
             opacity: 0.5;
-            transition: all 0.2s ease-in; }
+            transition: all 0.2s ease-in;
+            white-space: nowrap; }
+            @media only screen and (max-width: 62.5em) {
+              .header .nav .navContainer .navList .navItem .navLink {
+                font-size: 1.4rem; } }
             .header .nav .navContainer .navList .navItem .navLink:hover {
               opacity: 0.9; }
   .header .signInBox {
@@ -542,7 +586,11 @@ body {
           font-size: 1.2rem;
           font-family: var(--primary-font);
           opacity: 0.5;
-          transition: all 0.2s ease-in; }
+          transition: all 0.2s ease-in;
+          white-space: nowrap; }
+          @media only screen and (max-width: 62.5em) {
+            .header .signInBox .signInList .signInItem .signInLink {
+              font-size: 1.4rem; } }
           .header .signInBox .signInList .signInItem .signInLink:hover {
             opacity: 0.9; }
         .header .signInBox .signInList .signInItem #trybtn {
@@ -557,7 +605,6 @@ body {
 
 /* Hero Styles */
 .hero {
-  background-image: var(--colors-neutral700);
   position: relative;
   width: 100%;
   /* Set width to 100% */
@@ -568,7 +615,8 @@ body {
   overflow: hidden;
   /* Added overflow property */
   z-index: 10;
-  border-bottom: 1px solid var(--colors-neutral600); }
+  border-bottom: 1px solid var(--colors-neutral600);
+  background-color: var(--colors-neutral700); }
   .hero .bgImageBox {
     position: absolute;
     top: 0;
@@ -584,21 +632,26 @@ body {
       top: 0;
       /* Adjust top position */
       left: 0;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center center;
-      color: transparent; }
+      color: transparent;
+      max-width: 100%;
+      max-height: 100%; }
   .heroContainer {
     position: relative;
     z-index: 100;
     text-align: center; }
     .heroContainer .heroTextContainer {
-      margin-top: 6rem;
+      margin-top: 6%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 4rem;
       max-width: 55rem;
       margin-inline: auto; }
+      @media only screen and (min-width: 93.75em) {
+        .heroContainer .heroTextContainer {
+          margin-top: 4%; } }
       .heroContainer .heroTextContainer .headingTextBox {
         /* Your styles here */ }
         .heroContainer .heroTextContainer .headingTextBox .headingText {
@@ -607,15 +660,21 @@ body {
           line-height: 0.8;
           letter-spacing: -8px;
           color: var(--colors-foreground100); }
+          @media only screen and (min-width: 93.75em) {
+            .heroContainer .heroTextContainer .headingTextBox .headingText {
+              font-size: 20rem; } }
           .heroContainer .heroTextContainer .headingTextBox .headingText .line1 {
             -webkit-text-stroke: 1px var(--colors-lime800);
-            color: transparent; }
+            color: transparent;
+            white-space: nowrap; }
           .heroContainer .heroTextContainer .headingTextBox .headingText .line2 {
             -webkit-text-stroke: 1px var(--colors-lime600);
-            color: transparent; }
+            color: transparent;
+            white-space: nowrap; }
           .heroContainer .heroTextContainer .headingTextBox .headingText .line3 {
             -webkit-text-stroke: 1px var(--colors-lime400);
-            color: transparent; }
+            color: transparent;
+            white-space: nowrap; }
           .heroContainer .heroTextContainer .headingTextBox .headingText .char {
             visibility: hidden; }
       .heroContainer .heroTextContainer .paraBox {
